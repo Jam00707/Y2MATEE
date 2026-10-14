@@ -1,0 +1,57 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+
+# --- virtualenv (recreate with: python3 -m venv .venv && .venv/bin/pip install -r requirements.txt) ---
+.venv/
+venv/
+env/
+
+# --- ffmpeg / ffprobe binaries (downloaded by setup.sh — never commit, ~150 MB) ---
+bin/*
+!bin/.gitkeep
+
+# --- generated media: converted videos & audio, partial downloads ---
+downloads/*
+!downloads/.gitkeep
+*.mp4
+*.mp3
+*.webm
+*.m4a
+*.part
+*.ytdl
+*.tmp
+
+# --- logs / local state ---
+*.log
+server.log
+nohup.out
+.DS_Store
+Thumbs.db
+
+# --- secrets: NEVER commit these ---
+.env
+.env.*
+!.env.example
+cookies.txt
+*.cookies
+token.txt
+credentials.json
+
+# --- editors ---
+.idea/
+.vscode/
+*.swp
+
+# --- sandbox / tooling dirs that must not persist ---
+.arena/
+.cache/
+.local/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+node_modules/
+dist/
+build/

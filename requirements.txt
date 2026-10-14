@@ -1,0 +1,4 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+yt-dlp>=2026.1.1
+Pillow>=10.0
